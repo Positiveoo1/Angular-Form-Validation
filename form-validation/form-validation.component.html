@@ -1,0 +1,22 @@
+<main>
+    <div class="forms">
+        <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
+            <h1>Register</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="input-group">
+                <input type="text" placeholder="First name" name="fName" [(ngModel)]="formData.fName" required minlength="6">
+                <input type="text" placeholder="Last name" name="lName" [(ngModel)]="formData.lName" required minlength="6">
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Email" name="email" [(ngModel)]="formData.email" required email>
+                <input type="password" placeholder="Password" name="password" [(ngModel)]="formData.password" required minlength="5">
+                <input type="password" placeholder="Confirm password" name="confirmPassword" [(ngModel)]="formData.confirmPassword" required>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" [(ngModel)]="formData.terms" required>
+                <label for="terms">I accept the <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a></label>
+            </div>
+            <button type="submit" >Register Now</button>
+        </form>
+    </div>
+</main>
